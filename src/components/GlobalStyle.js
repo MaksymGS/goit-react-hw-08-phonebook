@@ -18,6 +18,7 @@ code {
 body {
   /* font-family: sans-serif; */
   line-height: 1.5;
+  background-color: #f4f4fd;
 }
 h1,
 h2,

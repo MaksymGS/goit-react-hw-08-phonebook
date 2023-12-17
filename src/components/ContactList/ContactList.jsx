@@ -22,8 +22,8 @@ export const ContactList = () => {
   return (
     <>
       <ul>
-        {getfilteredContacts.map(({ name, phone, id }) => (
-          <ContactItem key={id} id={id} name={name} phone={phone} />
+        {getfilteredContacts.map(({ name, number, id }) => (
+          <ContactItem key={id} id={id} name={name} number={number} />
         ))}
       </ul>
       <ThreeDots

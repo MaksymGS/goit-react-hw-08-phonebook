@@ -15,7 +15,7 @@ const formSchema = Yup.object().shape({
     .min(2, 'To short')
     .max(15, 'To long')
     .required('* This field required'),
-  phone: Yup.number().required('* This field required'),
+  number: Yup.number().required('* This field required'),
 });
 
 export const ContactForm = () => {
@@ -33,7 +33,7 @@ export const ContactForm = () => {
     <Formik
       initialValues={{
         name: '',
-        phone: '',
+        number: '',
       }}
       validationSchema={formSchema}
       onSubmit={(values, actions) => {
@@ -46,13 +46,13 @@ export const ContactForm = () => {
         <Field type="text" name="name" placeholder="Enter name..."></Field>
         <ErrMessage component="span" name="name" />
 
-        <StyledLabel htmlFor="name">Number</StyledLabel>
+        <StyledLabel htmlFor="name">Phone</StyledLabel>
         <Field
           type="tel"
-          name="phone"
+          name="number"
           placeholder="Enter phone number..."
         ></Field>
-        <ErrMessage component="span" name="phone" />
+        <ErrMessage component="span" name="number" />
 
         <Button type="submit">Add contact</Button>
       </StyledForm>
