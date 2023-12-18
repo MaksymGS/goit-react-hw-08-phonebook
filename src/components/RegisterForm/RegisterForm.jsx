@@ -53,7 +53,7 @@ export const RegisterForm = () => {
         ></Field>
         <ErrMessage component="span" name="password" />
 
-        <Button type="submit">Log In</Button>
+        <Button type="submit">Register</Button>
       </StyledForm>
     </Formik>
   );
