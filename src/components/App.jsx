@@ -6,6 +6,7 @@ import { useAuth } from 'hooks/useAuth';
 import { useDispatch } from 'react-redux';
 import { refreshUser } from 'redux/fetchingAuth';
 import { Layout } from './Layout';
+import { RotatingLines } from 'react-loader-spinner';
 
 const RegisterPage = lazy(() => import('pages/Register'));
 const LoginPage = lazy(() => import('pages/Login'));
@@ -18,13 +19,21 @@ export const App = () => {
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
-  
+
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+    <div style={{ textAlign: 'center',margin:'16px' }}>
+      <RotatingLines
+        strokeColor="#16437e"
+        strokeWidth="5"
+        animationDuration="0.75"
+        width="24"
+        visible={true}
+      />
+    </div>
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
-      <Route index element={<LoginPage />} />
+        <Route index element={<LoginPage />} />
         <Route
           path="/register"
           element={

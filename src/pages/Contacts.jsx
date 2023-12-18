@@ -1,7 +1,3 @@
-// import { ContactForm } from './ContactForm/ContactForm';
-// import { ContactList } from './ContactList/ContactList';
-// import { Filter } from './Filter/Filter';
-// import { Layout, Wrapper } from './Layout';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
 import { Filter } from 'components/Filter/Filter';
